@@ -1,5 +1,5 @@
-#! /usr/bin/env python3
 import json
+
 from flask import Flask, jsonify, abort, request, make_response
 
 app = Flask(__name__)
@@ -36,7 +36,7 @@ def get_employees(company_name):
 	employees = []
 	for person in people_list:
 		if person['company_id'] == company_id:
-			employees.append(person)
+			employees.append({'index': person['index'], 'name': person['name']})
 	return jsonify(employees)
 
 
@@ -58,8 +58,7 @@ def get_friends(id1, id2):
 		friend = people_list[i]
 		if friend['eyeColor'] == 'brown' and not friend['has_died']:
 			common_friends_selected.append(i)
-	return jsonify({'person_1': person_1,
-	                'person_2': person_2,
+	return jsonify({'person_1': person_1, 'person_2': person_2,
 	                'common_friends': common_friends_selected})
 
 
@@ -79,4 +78,4 @@ def get_food(person_id):
 
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(debug=False)
