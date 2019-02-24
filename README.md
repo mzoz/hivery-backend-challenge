@@ -33,3 +33,40 @@
     ```sh
     (env)$ python app.py
     ```
+
+## URLs
+
+1. Get employees given company name:
+
+    ```
+    http://127.0.0.1:5000//hivery/api/v1.0/company/<company_name>
+    ```
+    
+    eg,
+    ```
+    http://127.0.0.1:5000//hivery/api/v1.0/company/eargo
+    ```
+    
+1. Get friends given two people:
+
+    ```
+    http://127.0.0.1:5000//hivery/api/v1.0/people/<id1>/<id2>
+    ```
+    
+    eg,
+    ```
+    http://127.0.0.1:5000//hivery/api/v1.0/people/1/2
+    ```
+    
+1. Get personal info:
+
+    ```
+    http://127.0.0.1:5000//hivery/api/v1.0/people/<id>
+    ```
+    
+    eg,
+    ```
+    http://127.0.0.1:5000//hivery/api/v1.0/people/100
+    ```
+ 
+    
