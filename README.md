@@ -42,7 +42,7 @@
     http://127.0.0.1:5000//hivery/api/v1.0/company/<company_name>
     ```
     
-    eg,
+    e.g.
     ```
     http://127.0.0.1:5000//hivery/api/v1.0/company/eargo
     ```
@@ -53,7 +53,7 @@
     http://127.0.0.1:5000//hivery/api/v1.0/people/<id1>/<id2>
     ```
     
-    eg,
+    e.g.
     ```
     http://127.0.0.1:5000//hivery/api/v1.0/people/1/2
     ```
@@ -64,7 +64,7 @@
     http://127.0.0.1:5000//hivery/api/v1.0/people/<id>
     ```
     
-    eg,
+    e.g.
     ```
     http://127.0.0.1:5000//hivery/api/v1.0/people/100
     ```
