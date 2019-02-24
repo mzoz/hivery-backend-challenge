@@ -1,10 +1,8 @@
 #! /usr/bin/env python3
 import json
-from flask import Flask, jsonify, abort, request, make_response, url_for
-from flask_httpauth import HTTPBasicAuth
+from flask import Flask, jsonify, abort, request, make_response
 
-app = Flask(__name__, static_url_path="")
-auth = HTTPBasicAuth()
+app = Flask(__name__)
 
 
 @app.errorhandler(400)
@@ -60,7 +58,9 @@ def get_friends(id1, id2):
 		friend = people_list[i]
 		if friend['eyeColor'] == 'brown' and not friend['has_died']:
 			common_friends_selected.append(i)
-	return jsonify({'person_1': person_1, 'person_2': person_2, 'common_friends': common_friends_selected})
+	return jsonify({'person_1': person_1,
+	                'person_2': person_2,
+	                'common_friends': common_friends_selected})
 
 
 fruits = {'banana', 'apple', 'cucumber', 'strawberry', 'orange'}
